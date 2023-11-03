@@ -1,0 +1,62 @@
+.card {
+  max-width: 36rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.card:hover .number {
+  background-color: rgb(var(--accent-bg-color));
+  color: rgb(var(--primary-text-color));
+}
+
+.left {
+  align-items: flex-start;
+  text-align: start;
+}
+
+.right {
+  align-items: flex-end;
+  text-align: end;
+}
+
+.number {
+  width: 7.2rem;
+  height: 7.2rem;
+  background-color: rgb(var(--dim-bg-color));
+  color: rgb(var(--accent-text-color));
+  font-size: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(var(--accent-bg-color));
+  border-radius: 16px;
+  font-weight: 500;
+  transition: color 0.3s, background 0.3s;
+}
+
+.right-bottom {
+  border-bottom-right-radius: 0;
+}
+
+.left-bottom {
+  border-bottom-left-radius: 0;
+}
+
+.right-top {
+  border-top-right-radius: 0;
+}
+
+.left-top {
+  border-top-left-radius: 0;
+}
+
+.number-active {
+  background-color: rgb(var(--accent-bg-color));
+  color: rgb(var(--primary-text-color));
+}
+
+.description {
+  font-size: 1.6rem;
+}

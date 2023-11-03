@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12.8rem 0;
+  text-align: center;
+  gap: 1.6rem;
+}
+
+.team {
+  padding: 6.4rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20rem;
+  row-gap: 6.4rem;
+}

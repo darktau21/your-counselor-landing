@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.text {
+  max-width: 5.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}

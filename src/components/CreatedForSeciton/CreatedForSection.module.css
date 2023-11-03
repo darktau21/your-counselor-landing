@@ -1,0 +1,19 @@
+.section {
+  background-color: rgb(var(--dim-bg-color));
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 12.8rem 0;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3.2rem;
+}

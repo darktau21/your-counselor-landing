@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+}
+
+.img-container {
+  border-radius: 3.2rem;
+  overflow: hidden;
+  border: 5px solid rgb(var(--accent-bg-color));
+  width: 17rem;
+  height: 17rem;
+}
+
+.right-bottom {
+  border-bottom-right-radius: 0;
+}
+
+.left-bottom {
+  border-bottom-left-radius: 0;
+}
+
+.right-top {
+  border-top-right-radius: 0;
+}
+
+.left-top {
+  border-top-left-radius: 0;
+}

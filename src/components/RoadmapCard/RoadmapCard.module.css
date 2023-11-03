@@ -1,0 +1,73 @@
+.line {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 17rem;
+}
+
+.last-line {
+  justify-content: flex-start;
+}
+
+.last-line .card {
+  top: 2rem;
+}
+
+.card {
+  position: absolute;
+  border-radius: 1.6rem;
+  padding: 1.6rem 2.4rem;
+  background-color: white;
+  min-width: 40rem;
+}
+
+.left {
+  left: -40.5rem;
+  border-top-right-radius: 0;
+}
+
+.right {
+  right: -40.5rem;
+  border-top-left-radius: 0;
+}
+
+.header {
+  border-bottom: 1px solid rgb(var(--primary-text-color));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.8rem;
+}
+
+.label {
+  padding: 0.6rem 1.6rem;
+  color: rgb(var(--accent-text-color));
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: rgb(var(--dim-bg-color));
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.label-finished {
+  padding-left: 0.8rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0.8rem 0;
+}
+
+.list-item {
+  color: rgb(var(--accent-text-color));
+  font-size: 1.6rem;
+}

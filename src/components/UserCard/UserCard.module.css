@@ -1,0 +1,22 @@
+.card {
+  max-width: 26.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3.2rem 0;
+}
+
+.text {
+  padding-top: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.description {
+  font-size: 1.6rem;
+}

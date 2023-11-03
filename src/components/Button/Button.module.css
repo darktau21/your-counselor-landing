@@ -1,0 +1,33 @@
+.button {
+  border-radius: 10rem;
+  padding: 1rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: color 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.button:disabled {
+  border: 1px solid rgba(var(--accent-bg-color), 0.12);
+  color: rgb(var(--accent-text-color), 0.4);
+  cursor: not-allowed;
+}
+
+.filled {
+  background-color: rgb(var(--accent-bg-color));
+  color: rgb(var(--primary-text-color));
+}
+
+.transparent {
+  background: none;
+  border: 1px solid rgb(var(--accent-bg-color));
+  color: rgb(var(--accent-text-color));
+}
+
+.filled:active {
+  background-color: rgba(var(--accent-bg-color), 0.12);
+  color: rgb(var(--accent-text-color));
+}
+.transparent:active {
+  background-color: rgba(var(--accent-bg-color), 0.12);
+}
