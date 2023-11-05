@@ -1,0 +1,5 @@
+@media screen and (max-width: 56em) {
+  .line {
+    display: none;
+  }
+}

@@ -7,9 +7,10 @@ export const CreatedForSection = () => {
     <section className={styles.section}>
       <div className={`container`}>
         <div className={styles.content}>
-          <Heading as="h2">Приложение создано для</Heading>
-          <p>Тут написана какая то хуйня, заменить</p>
-          <div className={styles["cards-container"]}>
+          <Heading center as="h2" className={styles.heading}>
+            Приложение создано для
+          </Heading>
+          <div className={styles["cards-wrapper"]}>
             <UserCard
               imgSrc="/for-user-1.png"
               heading="Вожатых"

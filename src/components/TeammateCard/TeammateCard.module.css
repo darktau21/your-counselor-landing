@@ -2,34 +2,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1.6rem;
-}
-
-.card p {
-  font-size: 1.6rem;
+  scroll-snap-align: center;
+  position: relative;
 }
 
 .img-container {
   border-radius: 3.2rem;
   overflow: hidden;
-  border: 5px solid rgb(var(--accent-bg-color));
+  border: 5px solid rgb(var(--lightest));
   width: 17rem;
   height: 17rem;
 }
 
-.right-bottom {
-  border-bottom-right-radius: 0;
+.post {
+  flex: 1;
 }
 
-.left-bottom {
-  border-bottom-left-radius: 0;
+.card::after {
+  content: "";
+  position: absolute;
+  opacity: 0.15;
+  z-index: -1;
+  background-position: center/center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.right-top {
-  border-top-right-radius: 0;
+.castle::after {
+  width: 20rem;
+  height: 20rem;
+  top: 18%;
+  left: -35%;
+  background-image: url("/castle.png");
 }
 
-.left-top {
-  border-top-left-radius: 0;
+.dino::after {
+  width: 10rem;
+  height: 10rem;
+  top: 35%;
+  left: -5%;
+  background-image: url("/dino.png");
+  transform: rotateY(180deg);
+}
+
+.freddy::after {
+  width: 20rem;
+  height: 20rem;
+  top: 33%;
+  right: -55%;
+  background-image: url("/freddy.png");
+}
+
+@media screen and (max-width: 48em) {
+  .card::after {
+    display: none;
+  }
 }

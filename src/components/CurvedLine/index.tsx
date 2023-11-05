@@ -1,8 +1,11 @@
+import styles from "./CurvedLine.module.css";
+
 export const CurvedLine = () => {
   return (
     <svg
+      className={styles.line}
+      style={{ width: "100%", maxWidth: "500px" }}
       xmlns="http://www.w3.org/2000/svg"
-      width="506"
       height="40"
       viewBox="0 0 506 40"
       fill="none"

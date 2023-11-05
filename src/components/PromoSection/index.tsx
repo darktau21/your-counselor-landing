@@ -2,6 +2,8 @@ import { CurvedLine } from "../CurvedLine";
 import { Heading } from "../Heading";
 import Image from "next/image";
 import styles from "./PromoSection.module.css";
+import { P } from "../P";
+import promo from "./promo.png";
 
 export const PromoSection = () => {
   return (
@@ -12,8 +14,6 @@ export const PromoSection = () => {
             <svg
               className={`${styles.star} ${styles["star-1"]}`}
               xmlns="http://www.w3.org/2000/svg"
-              width="42"
-              height="42"
               viewBox="0 0 61 61"
               fill="none"
             >
@@ -27,8 +27,6 @@ export const PromoSection = () => {
             <svg
               className={`${styles.star} ${styles["star-2"]}`}
               xmlns="http://www.w3.org/2000/svg"
-              width="60"
-              height="60"
               viewBox="0 0 61 61"
               fill="none"
             >
@@ -39,40 +37,32 @@ export const PromoSection = () => {
                 fill="#C6F4DA"
               />
             </svg>
-            <Heading>
+            <Heading className={styles.shadow}>
               Твой вожатый <br /> помощник в организации детского отдыха
             </Heading>
-            <p>
+            <P className={styles.shadow}>
               Мы предлагаем вам инструменты, которые помогут вам эффективно
               провести лагерный сезон и создать незабываемые впечатления для
               детей.
-            </p>
+            </P>
             <CurvedLine />
           </div>
           <div className={styles["img-container"]}>
-            <Image
-              src="/promo.png"
-              alt="Улыбающаяся тётя"
-              width={350}
-              height={450}
-              // fill
-              // objectFit="contain"
-            />
-          </div>
-          <div className={styles["scroll-container"]}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="60"
-              height="80"
-              viewBox="0 0 60 80"
-              fill="none"
-            >
-              <path
-                d="M0.5 30C0.5 13.7076 13.7076 0.5 30 0.5C46.2924 0.5 59.5 13.7076 59.5 30V50C59.5 66.2924 46.2924 79.5 30 79.5C13.7076 79.5 0.5 66.2924 0.5 50V30Z"
-                fill="#DEF8E9"
-                stroke="#A8E0C0"
+            <div className={styles["img-wrapper"]}>
+              <Image
+                src={promo}
+                alt="Улыбающаяся тётя"
+                priority
+                // width={350}
+                // height={450}
+                fill
+                sizes="(max-width: 70em) 200px, 350px"
+                quality={100}
+                // objectFit="contain"
+                // fill
+                // objectFit="contain"
               />
-            </svg>
+            </div>
           </div>
         </div>
       </div>

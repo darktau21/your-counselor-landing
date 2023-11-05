@@ -1,14 +1,19 @@
 :root {
-  --max-width: 130rem;
   --border-radius: 12px;
 
-  --main-text-color: 5, 57, 28;
+  --darkest: 5, 57, 28;
+  --dark: 52, 165, 101;
+  --main: 109, 192, 145;
+  --light: 168, 224, 192;
+  --lightest: 222, 248, 233;
+  --white: 240, 249, 244;
+  /* --main-text-color: 5, 57, 28;
   --primary-text-color: 240, 249, 244;
   --accent-text-color: 52, 165, 101;
 
   --accent-bg-color: 52, 165, 101;
   --fading-bg-color: 168, 224, 192;
-  --dim-bg-color: 240, 249, 244;
+  --dim-bg-color: 240, 249, 244; */
 }
 
 * {
@@ -16,21 +21,21 @@
   padding: 0;
   margin: 0;
   border: none;
-  font-family: inherit;
 }
 
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   max-width: 100vw;
   min-width: 32rem;
   overflow-x: hidden;
-  font-size: 62.5%;
 }
 
 body {
-  font-family: var(--fira-font), sans-serif;
-  font-size: 2rem;
-  font-weight: 300;
+  font-family: var(--mont-font), sans-serif;
+  font-weight: 400;
   color: rgb(var(--main-text-color));
 }
 
@@ -40,7 +45,13 @@ a {
 }
 
 .container {
-  max-width: var(--max-width);
+  max-width: 182rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 4rem;
+}
+
+@media screen and (max-width: 56em) {
+  .container {
+    padding: 0;
+  }
 }

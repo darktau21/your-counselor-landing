@@ -8,4 +8,5 @@
   max-width: 5.4rem;
   font-size: 1.4rem;
   font-weight: 500;
+  font-family: var(--fira-font), sans-serif;
 }

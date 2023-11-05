@@ -1,19 +1,20 @@
 import { Heading } from "../Heading";
+import { P } from "../P";
 import { RoadmapCard } from "../RoadmapCard";
 import styles from "./RoadmapSection.module.css";
 
 export const RoadmapSection = () => {
   return (
-    <section className={styles.section}>
+    <section>
       <div className={`container`}>
         <div className={styles.content}>
-          <Heading as="h2" color="accent">
+          <Heading as="h2" center>
             Что было сделано
           </Heading>
-          <p>
+          <P>
             Мы находимся в активной разработке приложения и не планируем
             останавливаться, так как уже достигли значительных результатов.
-          </p>
+          </P>
           <div className={styles.roadmap}>
             <RoadmapCard
               heading="Планирование"

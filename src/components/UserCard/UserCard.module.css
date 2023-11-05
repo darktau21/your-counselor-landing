@@ -1,22 +1,70 @@
 .card {
-  max-width: 26.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 3.2rem 0;
+  /* display: grid;
+  grid-template-columns: minmax(20rem, 1fr) 1fr;
+  align-items: center; */
+  gap: 3.2rem;
+  padding: 4.8rem;
+  background: linear-gradient(90deg, #fff 63.53%, #e9fff3 100%);
+  border: 1px solid rgb(var(--light));
+  border-radius: 2.4rem;
+  scroll-snap-align: center;
+  /* min-width: 90vw; */
+  /* max-width: 74rem; */
+}
+
+.img-wrapper {
+  position: relative;
+  height: 10rem;
+  flex: 1 0 10rem;
+}
+
+@media screen and (max-width: 84em) {
+  .card {
+    padding: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 70em) {
+  .card {
+    min-width: 50vw;
+  }
+
+  .img-wrapper {
+    flex: 1 0 6.4rem;
+    height: 6.4rem;
+  }
+}
+
+@media screen and (max-width: 61em) {
+  .card {
+    padding: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .card {
+    padding: 1.6rem;
+    gap: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 36em) {
+  .card {
+    min-width: 28.5rem;
+  }
 }
 
 .text {
-  padding-top: 3rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  text-align: start;
+  /* display: flex; */
+  /* align-items: flex-start; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
   gap: 0.8rem;
-}
-
-.description {
-  font-size: 1.6rem;
+  /* min-width: 25rem; */
+  /* max-height: 20rem; */
+  /* flex: 1 0 30rem; */
 }

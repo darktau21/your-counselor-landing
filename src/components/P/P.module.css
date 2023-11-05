@@ -1,0 +1,19 @@
+.large {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.small {
+  font-size: 1.6rem;
+  line-height: 1.375;
+}
+
+@media screen and (max-width: 61em) {
+  .large {
+    font-size: 1.6rem;
+  }
+
+  .small {
+    font-size: 1.4rem;
+  }
+}

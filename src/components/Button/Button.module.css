@@ -8,26 +8,29 @@
 }
 
 .button:disabled {
-  border: 1px solid rgba(var(--accent-bg-color), 0.12);
-  color: rgb(var(--accent-text-color), 0.4);
+  border: 1px solid rgba(var(--dark), 0.12);
+  color: rgb(var(--dark), 0.4);
+  background-color: rgb(var(--white));
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .filled {
-  background-color: rgb(var(--accent-bg-color));
-  color: rgb(var(--primary-text-color));
+  background-color: rgb(var(--dark));
+  color: rgb(var(--white));
 }
 
 .transparent {
   background: none;
-  border: 1px solid rgb(var(--accent-bg-color));
-  color: rgb(var(--accent-text-color));
+  border: 1px solid rgb(var(--dark));
+  color: rgb(var(--dark));
+  background-color: white;
 }
 
 .filled:active {
-  background-color: rgba(var(--accent-bg-color), 0.12);
-  color: rgb(var(--accent-text-color));
+  background-color: rgba(var(--dark), 0.12);
+  color: rgb(var(--dark));
 }
 .transparent:active {
-  background-color: rgba(var(--accent-bg-color), 0.12);
+  background-color: rgba(var(--white));
 }

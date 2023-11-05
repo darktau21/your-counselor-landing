@@ -4,11 +4,28 @@
   flex-direction: column;
   gap: 0.8rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.left:hover {
+  text-shadow: -3rem -2rem 7rem rgba(var(--dark), 1);
+}
+
+.right:hover {
+  text-shadow: 3rem -2rem 7rem rgba(var(--dark), 1);
+}
+
+.right.active {
+  text-shadow: 3rem -2rem 7rem rgba(var(--dark), 1);
+}
+
+.left.active {
+  text-shadow: -3rem -2rem 7rem rgba(var(--dark), 1);
 }
 
 .card:hover .number {
-  background-color: rgb(var(--accent-bg-color));
-  color: rgb(var(--primary-text-color));
+  background-color: rgb(var(--dark));
+  color: rgb(var(--white));
 }
 
 .left {
@@ -24,16 +41,20 @@
 .number {
   width: 7.2rem;
   height: 7.2rem;
-  background-color: rgb(var(--dim-bg-color));
-  color: rgb(var(--accent-text-color));
+  background-color: rgb(var(--white));
+  color: rgb(var(--dark));
   font-size: 3.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(var(--accent-bg-color));
+  border: 1px solid rgb(var(--dark));
   border-radius: 16px;
   font-weight: 500;
   transition: color 0.3s, background 0.3s;
+}
+
+.image-wrapper {
+  display: none;
 }
 
 .right-bottom {
@@ -53,10 +74,61 @@
 }
 
 .number-active {
-  background-color: rgb(var(--accent-bg-color));
-  color: rgb(var(--primary-text-color));
+  background-color: rgb(var(--dark));
+  color: rgb(var(--white));
 }
 
-.description {
-  font-size: 1.6rem;
+@media screen and (max-width: 64em) {
+  .card {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 15rem 1fr;
+    gap: 1.6rem;
+  }
+
+  .image-wrapper {
+    display: block;
+    position: relative;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    height: 30rem;
+  }
+
+  .heading {
+    grid-row: 2/3;
+    grid-column: 1/4;
+  }
+
+  .description {
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+
+  .number {
+    align-self: center;
+  }
+
+  .mobile-left {
+    grid-column: 1/2;
+    border-radius: 16px;
+    border-top-right-radius: 0;
+    justify-self: end;
+  }
+
+  .mobile-right {
+    grid-column: 3/4;
+    border-radius: 16px;
+    border-top-left-radius: 0;
+    justify-self: start;
+  }
+}
+
+@media screen and (max-width: 36em) {
+  .card {
+    grid-template-columns: 1fr 9.6rem 1fr;
+  }
+
+  .image-wrapper {
+    height: 19.2rem;
+  }
 }

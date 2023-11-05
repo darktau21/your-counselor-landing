@@ -1,27 +1,19 @@
 import { Heading } from "../Heading";
+import { P } from "../P";
 import styles from "./TeammateCard.module.css";
 import Image from "next/image";
-
-type XAxis = "left" | "right";
-type YAxis = "top" | "bottom";
-type AnglePosition = `${XAxis}-${YAxis}`;
 
 type Props = {
   imgSrc: string;
   fullName: string;
   post: string;
-  anglePosition: AnglePosition;
+  bgImg?: "castle" | "freddy" | "dino";
 };
 
-export const TeammateCard = ({
-  anglePosition,
-  imgSrc,
-  fullName,
-  post,
-}: Props) => {
+export const TeammateCard = ({ imgSrc, fullName, post, bgImg }: Props) => {
   return (
-    <div className={styles.card}>
-      <div className={`${styles["img-container"]} ${styles[anglePosition]}`}>
+    <div className={`${styles.card} ${bgImg && styles[bgImg]}`}>
+      <div className={`${styles["img-container"]}`}>
         <Image
           style={{ padding: 0, margin: 0 }}
           width={170}
@@ -31,8 +23,8 @@ export const TeammateCard = ({
           quality={80}
         />
       </div>
+      <P className={styles.post}>{post}</P>
       <Heading as="h3">{fullName}</Heading>
-      <p>{post}</p>
     </div>
   );
 };

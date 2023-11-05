@@ -1,5 +1,8 @@
+import { Dispatch, SetStateAction } from "react";
 import { Heading } from "../Heading";
+import { P } from "../P";
 import styles from "./FeatureCard.module.css";
+import Image from "next/image";
 
 type XAxis = "left" | "right";
 type YAxis = "top" | "bottom";
@@ -14,6 +17,9 @@ type Props = {
   isActive?: boolean;
   number: number;
   className?: string;
+  img: string;
+  mobileAlign: `mobile-${XAxis}`;
+  setActiveCard: Dispatch<SetStateAction<number>>;
 };
 
 export const FeatureCard = ({
@@ -24,18 +30,38 @@ export const FeatureCard = ({
   isActive = false,
   number,
   className = "",
+  img,
+  mobileAlign,
+  setActiveCard,
 }: Props) => {
   return (
-    <div className={`${styles.card} ${styles[align]} ${className}`}>
+    <div
+      className={`${styles.card} ${styles[align]} ${
+        isActive && styles.active
+      } ${className}`}
+      onClick={() => setActiveCard(number)}
+    >
       <span
-        className={`${styles.number} ${styles[anglePosition]} ${
-          isActive && styles["number-active"]
-        }`}
+        className={`${styles.number} ${styles[mobileAlign]} ${
+          styles[anglePosition]
+        } ${isActive && styles["number-active"]}`}
       >
         {number}
       </span>
-      <Heading as="h3">{heading}</Heading>
-      <p className={styles.description}>{description}</p>
+      <div className={styles["image-wrapper"]}>
+        <Image
+          src={img}
+          fill
+          sizes="(max-width: 36em) 96px, 150px"
+          alt={heading}
+        />
+      </div>
+      <Heading className={styles.heading} as="h3">
+        {heading}
+      </Heading>
+      <P variant="small" className={styles.description}>
+        {description}
+      </P>
     </div>
   );
 };

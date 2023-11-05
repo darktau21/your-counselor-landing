@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./UserCard.module.css";
 import { Heading } from "../Heading";
+import { P } from "../P";
 
 type Props = {
   imgSrc: string;
@@ -11,12 +12,17 @@ type Props = {
 export const UserCard = ({ imgSrc, heading, description }: Props) => {
   return (
     <div className={styles.card}>
-      <Image src={imgSrc} width={100} height={100} alt={heading} />
       <div className={styles.text}>
-        <Heading as="h3" color="accent">
-          {heading}
-        </Heading>
-        <p className={styles.description}>{description}</p>
+        <Heading as="h3">{heading}</Heading>
+        <P variant="small">{description}</P>
+      </div>
+      <div className={styles["img-wrapper"]}>
+        <Image
+          src={imgSrc}
+          fill
+          sizes="(max-width: 70em) 64px, 100px"
+          alt={heading}
+        />
       </div>
     </div>
   );
