@@ -9,8 +9,8 @@
   padding: 10rem 2rem;
   background: radial-gradient(
     circle at center,
-    rgba(var(--dark), 0.1) 25%,
-    rgba(255, 255, 255, 1) 40%
+    rgba(var(--dark), 0.1) 10%,
+    rgba(255, 255, 255, 1) 20%
   );
 }
 
