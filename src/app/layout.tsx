@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Fira_Sans_Condensed, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
@@ -38,6 +39,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-BV231Y2BPM" />
+      <Script id="google-analytics">
+        {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BV231Y2BPM');
+    `}
+      </Script>
       <body className={montserrat.className}>{children}</body>
     </html>
   );
