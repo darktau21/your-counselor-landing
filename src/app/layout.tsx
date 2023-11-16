@@ -61,16 +61,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-BV231Y2BPM" />
-      <Script id="google-analytics">
-        {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-BV231Y2BPM');
-    `}
-      </Script>
       <body className={montserrat.className}>{children}</body>
     </html>
   );
