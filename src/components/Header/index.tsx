@@ -12,7 +12,7 @@ export const Header = () => {
             linkTo={"https://www.donationalerts.com/r/tvojvozhatyj"}
             variant="transparent"
           >
-            Спонсировать
+            Поддержать проект
           </Button>
         </div>
       </div>
