@@ -9,9 +9,7 @@ export const Header = () => {
         <div className={styles.content}>
           <Logo />
           <Button
-            linkTo={
-              "https://boosty.to/tvoj-vozhatyj/single-payment/donation/492502/target?share=target_link"
-            }
+            linkTo={"https://www.donationalerts.com/r/tvojvozhatyj"}
             variant="transparent"
           >
             Спонсировать
