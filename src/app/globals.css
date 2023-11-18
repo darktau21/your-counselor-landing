@@ -29,7 +29,7 @@ html {
 html,
 body {
   max-width: 100vw;
-  min-width: 32rem;
+  /* min-width: 32rem; */
   overflow-x: hidden;
 }
 
@@ -37,6 +37,7 @@ body {
   font-family: var(--mont-font), sans-serif;
   font-weight: 400;
   color: rgb(var(--main-text-color));
+  min-width: 32rem;
 }
 
 a {
