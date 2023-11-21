@@ -53,6 +53,7 @@ export const FeatureCard = ({
           src={img}
           fill
           sizes="(max-width: 36em) 144px, 287px"
+          quality={90}
           alt={heading}
         />
       </div>

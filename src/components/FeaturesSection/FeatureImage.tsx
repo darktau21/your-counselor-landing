@@ -15,7 +15,7 @@ export const FeatureImage = ({ src, alt }: Props) => {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className={styles["phone-container"]}
     >
-      <Image src={src} width={256} height={503} alt={alt} />
+      <Image src={src} width={256} height={503} alt={alt} quality={100} />
     </motion.div>
   );
 };
