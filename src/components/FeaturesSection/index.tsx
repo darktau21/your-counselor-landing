@@ -1,10 +1,17 @@
 "use client";
 
-import Image from "next/image";
 import { FeatureCard } from "../FeatureCard";
 import { Heading } from "../Heading";
+import { FeatureImage } from "./FeatureImage";
 import styles from "./FeaturesSection.module.css";
 import { useState } from "react";
+
+const featureImages = [
+  { src: "/features/feature-1.png", alt: "Справочник вожатого" },
+  { src: "/features/feature-2.png", alt: "Умный алгоритм" },
+  { src: "/features/feature-stub.png", alt: "Персональные заметки" },
+  { src: "/features/feature-stub.png", alt: "Расписание для вожатого" },
+];
 
 export const FeaturesSection = () => {
   const [activeCard, setActiveCard] = useState(1);
@@ -25,7 +32,7 @@ export const FeaturesSection = () => {
               align="right"
               isActive={activeCard === 1}
               className={styles["feature-1"]}
-              img="/phone.png"
+              img="/features/feature-1.png"
               mobileAlign="mobile-left"
               setActiveCard={setActiveCard}
             />
@@ -37,7 +44,7 @@ export const FeaturesSection = () => {
               align="right"
               isActive={activeCard === 2}
               className={styles["feature-2"]}
-              img="/phone.png"
+              img="/features/feature-2.png"
               mobileAlign="mobile-right"
               setActiveCard={setActiveCard}
             />
@@ -49,7 +56,7 @@ export const FeaturesSection = () => {
               align="left"
               isActive={activeCard === 3}
               className={styles["feature-3"]}
-              img="/phone.png"
+              img="/features/feature-stub.png"
               mobileAlign="mobile-left"
               setActiveCard={setActiveCard}
             />
@@ -61,19 +68,15 @@ export const FeaturesSection = () => {
               align="left"
               isActive={activeCard === 4}
               className={styles["feature-4"]}
-              img="/phone.png"
+              img="/features/feature-stub.png"
               mobileAlign="mobile-right"
               setActiveCard={setActiveCard}
             />
 
-            <div className={styles["phone-container"]}>
-              <Image
-                src={"/phone.png"}
-                width={220}
-                height={440}
-                alt="Смартфон"
-              />
-            </div>
+            {activeCard === 1 ? <FeatureImage {...featureImages[0]} /> : null}
+            {activeCard === 2 ? <FeatureImage {...featureImages[1]} /> : null}
+            {activeCard === 3 ? <FeatureImage {...featureImages[2]} /> : null}
+            {activeCard === 4 ? <FeatureImage {...featureImages[3]} /> : null}
           </div>
         </div>
       </div>
