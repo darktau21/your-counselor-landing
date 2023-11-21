@@ -37,10 +37,10 @@ export const PromoSection = () => {
                 fill="#C6F4DA"
               />
             </svg>
-            <Heading className={styles.shadow}>
+            <Heading>
               Твой вожатый <br /> помощник в организации детского отдыха
             </Heading>
-            <P className={styles.shadow}>
+            <P>
               Мы предлагаем вам инструменты, которые помогут вам эффективно
               провести лагерный сезон и создать незабываемые впечатления для
               детей.
