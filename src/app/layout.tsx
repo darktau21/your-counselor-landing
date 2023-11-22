@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import Head from "next/head";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
@@ -61,6 +62,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+      <Script
+        async
+        src="https://xn--80aaa5aameo2c.xn----8sbebupe8ad8ai2i.xn--p1ai/script.js"
+        data-website-id="3862888c-6ea4-4532-b5ce-11345b2b3be3"
+      />
       <body className={montserrat.className}>{children}</body>
     </html>
   );

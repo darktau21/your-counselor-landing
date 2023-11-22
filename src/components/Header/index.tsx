@@ -11,6 +11,7 @@ export const Header = () => {
           <Button
             linkTo={"https://www.donationalerts.com/r/tvojvozhatyj"}
             variant="transparent"
+            analyticsEvent="Переход по ссылке на донат"
           >
             Поддержать
           </Button>

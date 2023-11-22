@@ -4,6 +4,7 @@ import styles from "./Button.module.css";
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "filled" | "transparent";
   linkTo?: string;
+  analyticsEvent?: string;
 };
 
 export const Button = ({
@@ -12,6 +13,7 @@ export const Button = ({
   className,
   type = "button",
   linkTo,
+  analyticsEvent,
   ...props
 }: Props) => {
   if (linkTo)
@@ -21,6 +23,7 @@ export const Button = ({
         target="_blank"
         rel="noopener noreferrer"
         href={linkTo}
+        data-umami-event={analyticsEvent}
       >
         {children}
       </a>
@@ -29,6 +32,7 @@ export const Button = ({
   return (
     <button
       className={`${className} ${styles.button} ${styles[variant]}`}
+      data-umami-event={analyticsEvent}
       {...props}
     >
       {children}
