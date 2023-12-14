@@ -1,5 +1,5 @@
 .content {
-  min-height: calc(100vh - calc(40px + 1.6rem * 2));
+  height: 100vh;
   display: grid;
   grid-template-rows: 25% repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
