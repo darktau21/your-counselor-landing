@@ -1,11 +1,8 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Header } from "@/components/Header";
-import { PromoSection } from "@/components/PromoSection";
 import { CreatedForSection } from "@/components/CreatedForSeciton";
 import { FeaturesSection } from "@/components/FeaturesSection";
+import { Header } from "@/components/Header";
+import { PromoSection } from "@/components/PromoSection";
 import { RoadmapSection } from "@/components/RoadmapSection";
-import { TeamSection } from "@/components/TeamSection";
 
 export default function Home() {
   return (
@@ -16,7 +13,7 @@ export default function Home() {
         <CreatedForSection />
         <FeaturesSection />
         <RoadmapSection />
-        <TeamSection />
+        {/* <TeamSection /> */}
       </main>
     </>
   );

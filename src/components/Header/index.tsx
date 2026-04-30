@@ -1,4 +1,3 @@
-import { Button } from "../Button";
 import { Logo } from "../Logo";
 import styles from "./Header.module.css";
 
@@ -8,13 +7,13 @@ export const Header = () => {
       <div className="container">
         <div className={styles.content}>
           <Logo />
-          <Button
+          {/* <Button
             linkTo={"https://www.donationalerts.com/r/tvojvozhatyj"}
             variant="transparent"
             analyticsEvent="Переход по ссылке на донат"
           >
             Поддержать
-          </Button>
+          </Button> */}
         </div>
       </div>
     </header>
